@@ -8,10 +8,11 @@
 # Use:
 # add the script slock to /usr/local/bin/
 # run chmod +x slock
+# (may change the path of the logo)
 # for autolock add xautolock -time 10 -locker slock to a startscript (e.g. .bashrc)
 
 scrot /tmp/screenshot.png
 #convert /tmp/screenshot.png -scale 10% -scale 1000% /tmp/screenshotblur.png
 #convert /tmp/screenshot.png -blur 0x4 -font sans -pointsize 26 -fill white -gravity center -annotate +0+200 'Type password to unlock' - | composite -gravity center /home/dogi/Bilder/dog_mini_transparent.png - /tmp/screenshotblur.png
-convert /tmp/screenshot.png -blur 0x4  - | composite -gravity center /home/dogi/Bilder/dog_mini_transparent.png - /tmp/screenshotblur.png
+convert /tmp/screenshot.png -blur 0x4  - | composite -gravity center ~/Bilder/dog_mini_transparent.png - /tmp/screenshotblur.png
 i3lock -i /tmp/screenshotblur.png -u -t
