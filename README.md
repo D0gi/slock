@@ -1,5 +1,6 @@
 # slock
 slock(i3lock) with blurred screenshot and logo
+![screenlockscreenshot](https://github.com/D0gi/slock/blob/master/screenshotblur.png?raw=true)
 
 ## Dependencies:
  i3lock, scrot, imagemagick, xautolock
