@@ -1,0 +1,16 @@
+#!/bin/bash
+# slock (i3lock)
+#
+# Dependencies:
+# i3lock scrot imagemagick xautolock
+#
+# add this script to /usr/local/bin and 'chmod +x slock'
+#
+# for autolock add 'xautolock -time 10 -locker slock'
+
+
+scrot /tmp/screenshot.png
+#convert /tmp/screenshot.png -scale 10% -scale 1000% /tmp/screenshotblur.png
+#convert /tmp/screenshot.png -blur 0x4 -font sans -pointsize 26 -fill white -gravity center -annotate +0+200 'Type password to unlock' - | composite -gravity center /home/dogi/Bilder/dog_mini_transparent.png - /tmp/screenshotblur.png
+convert /tmp/screenshot.png -blur 0x4  - | composite -gravity center /home/dogi/Bilder/dog_mini_transparent.png - /tmp/screenshotblur.png
+i3lock -i /tmp/screenshotblur.png -u -t
